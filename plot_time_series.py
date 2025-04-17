@@ -5,9 +5,7 @@ import seaborn as sns
 
 sns.set(style="whitegrid", palette="muted", font_scale=1.2)
 
-# Generate synthetic time series data
 dates = pd.date_range(start="2020-01-01", periods=500, freq="D")
-# Synthetic conditional volatility: sine wave plus noise
 cond_vol = 10 + 2 * np.sin(np.linspace(0, 10 * np.pi, len(dates))) + np.random.normal(scale=0.5, size=len(dates))
 
 df = pd.DataFrame({"Date": dates, "cond_vol": cond_vol})
