@@ -5,9 +5,7 @@ import seaborn as sns
 sns.set(style="whitegrid", palette="muted", font_scale=1.2)
 np.random.seed(42)
 
-# Generate synthetic data
 log_ret = np.random.normal(loc=0, scale=0.01, size=1000)
-# Synthetic conditional volatility with some dependence on absolute returns
 cond_vol = 10 + 3 * np.abs(log_ret) + np.random.normal(scale=0.2, size=1000)
 
 plt.figure(figsize=(10, 6))
