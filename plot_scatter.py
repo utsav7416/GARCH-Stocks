@@ -5,9 +5,7 @@ import seaborn as sns
 sns.set(style="whitegrid", palette="muted", font_scale=1.2)
 np.random.seed(42)
 
-# Generate synthetic data for rolling and GARCH conditional volatility
 rolling_vol = 12 + np.random.normal(scale=1, size=500)
-# Synthetic conditional volatility correlated with rolling volatility
 cond_vol = rolling_vol + np.random.normal(scale=0.5, size=500)
 
 plt.figure(figsize=(10, 6))
