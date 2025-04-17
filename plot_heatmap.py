@@ -7,7 +7,7 @@ sns.set(style="whitegrid", palette="muted", font_scale=1.2)
 np.random.seed(42)
 
 years = np.repeat([2020, 2021, 2022], 12)
-months = np.tile(np.arange(1, 13), 3)
+months = np.tile(np.arange(1, 13), 3) 
 avg_vol = np.random.uniform(low=8, high=15, size=len(years))
 
 df = pd.DataFrame({
